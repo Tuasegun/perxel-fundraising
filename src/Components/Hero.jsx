@@ -47,10 +47,16 @@ export default Hero;
 
 const HeroContainer = styled.div`
   padding: 4.125rem 5.125rem;
-  min-height: 100vh;
+  height: 90vh;
+  max-width: 1440px;
+  @media screen and (min-width: 1440px) {
+          padding: 0 auto;
+          margin: 0 auto;
+          max-height: 70vh;
+  }
   @media screen and (max-width: 768px) {
-    padding: 4.125rem 2.625em 1.125rem 0.9rem;
-    min-height: 85vh;
+    padding: 4.125rem 2.625em 5.125rem 0.9rem;
+    min-height: 100vh;
   }
   .container {
     display: grid;
@@ -132,11 +138,7 @@ const HeroContainer = styled.div`
         bottom: 0;
         left: 35%;
         
-        @media screen and (min-width: 2560px) {
-          left: 40%;
-          top: 85%;
-          height: 6rem;
-        }
+        
         
         @media screen and (max-width: 768px) {
           left: 25;

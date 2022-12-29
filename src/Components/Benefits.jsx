@@ -71,10 +71,16 @@ export default Benefits
 const BenefitsContainer = styled.div`
   position: relative;
   padding: 13.125rem 10% 13.125rem 10%;
+  max-width: 1440px;
+  @media screen and (min-width: 1440px) {
+          padding: 0 auto;
+          margin: 0 auto;
+  }
   @media (max-width: 768px) {
     margin-top: 20rem;
    padding-bottom: 6rem;
   }
+  
     .container{
         display: flex;
         column-gap: 10%;
@@ -82,9 +88,7 @@ const BenefitsContainer = styled.div`
           flex-direction: column;
           gap: 4.0625rem;
         }
-        @media screen and (min-width: 2560px) {
-               justify-content: space-between;
-        }
+      
         .benefit-text{
          
           .main-text{

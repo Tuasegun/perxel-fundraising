@@ -5,15 +5,16 @@ import menuIcon from '../assets/images/menu-icon.svg'
 import {AiOutlineClose} from 'react-icons/ai'
 import {RiMenu3Fill} from 'react-icons/ri'
 import {Link} from 'react-router-dom'
-const Header = () => {
+const Header = ({contact}) => {
     const [active, setActive] = React.useState(false)
   return (
     <StyledHeader>
         <div className={!active ? "header-container" : "mobile-container"}>
             <div className="logo-container">
+                <Link to="/">
                 <img src={logo} alt="logo" />
-
                 <AiOutlineClose className="close-icon" onClick={() => setActive(!active)} />
+                </Link>
             </div>
             <div className="nav-container">
                 <ul >
@@ -23,9 +24,11 @@ const Header = () => {
                 </ul>
             </div>
             <div className="contact-btn active">
-                <Link to="/contact-us">
-                <button>Contact Us</button>
-                </Link>
+                {
+                    !contact ? <Link to="/contact-us">
+                    <button>Contact Us</button>
+                    </Link> : <></>
+                }
             </div>
             <div className="menu-icon">
                 <RiMenu3Fill className='icon'  onClick={() => setActive(!active)}/>
@@ -40,6 +43,11 @@ const Header = () => {
 export default Header
 
 const StyledHeader = styled.div`
+max-width: 1440px;
+  @media screen and (min-width: 1440px) {
+          padding: 0 auto;
+          margin: 0 auto;
+  }
     .header-container{
         width: 100%;
         padding: 1.875rem 5.25rem 1.875rem 6.25rem;
@@ -97,7 +105,7 @@ const StyledHeader = styled.div`
                 color: #FFFFFF;
                 font-weight: 700;
                 font-size: 1.25rem;
-
+                cursor: pointer;
                 @media (max-width: 768px){
                     display: none;
                 }

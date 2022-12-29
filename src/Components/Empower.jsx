@@ -74,6 +74,11 @@ export default Empower;
 const EmpowerContainer = styled.div`
   position: relative;
   padding: 10rem 0 5rem 0;
+  max-width: 1440px;
+  @media screen and (min-width: 1440px) {
+          padding: 0 auto;
+          margin: 0 auto;
+  }
   @media screen and (max-width: 768px) {
     padding: 4.125rem 0 1.125rem 0;
   }
@@ -129,7 +134,7 @@ const EmpowerContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 0;
-    
+      
 
     @media screen and (max-width: 768px) {
         padding: 0;

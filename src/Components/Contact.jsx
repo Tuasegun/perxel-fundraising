@@ -1,35 +1,42 @@
 import React from 'react'
 import styled from 'styled-components'
+import backIcon from '../assets/images/backIcon.svg'
 import member1 from '../assets/images/team/member1.png'
 import member2 from '../assets/images/team/member2.png'
 import member3 from '../assets/images/team/member3.png'
 import member4 from '../assets/images/team/member4.png'
 import ContactCard from './ContactCard'
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
+
 const contactContent = [
     {
         id: 1,
         imgSrc: member1,
         name: 'Abiodun-Fiwa',
-        role: 'Founder'
+        role: 'Founder',
+        liurl: 'https://www.linkedin.com/in/abiodun-fiwa-okunade-6111a914a/'
     },
     {
         id: 2,
         imgSrc: member2,
         name: 'Olabanji  Ewenla',
-        role: 'Product Manager'
+        role: 'Product Manager',
+        liurl: 'https://www.linkedin.com/in/olabanjiewenla/'
     },
     {
         id: 3,
         imgSrc: member3,
         name: 'Hakeem Texas',
-        role: 'Fundraiser manager'
+        role: 'Fundraiser manager',
+        liurl: 'https://www.linkedin.com/in/tijanihakeem'
     },
     {
         id: 4,
         imgSrc: member4,
         name: 'Thomas Banjo',
-        role: 'Advisor'
+        role: 'Advisor',
+        liurl: 'https://www.linkedin.com/in/thomas-banjo-b1b95536/'
     }
 ]
 
@@ -38,7 +45,15 @@ const Contact = () => {
   return (
     <StyledContact>
         <div className="contact-container">
+           
             <div className="contact-left">
+                
+                 <div className="back-icon">
+                 <Link to="/">
+                <img src={backIcon} alt="back" />
+                </Link>
+                </div>
+            
                 <div className="text-container">
                     <h1>Meet the Team</h1>
                     <p>
@@ -75,9 +90,17 @@ const StyledContact = styled.div`
     position: relative;
     background-color: #DBF5FF;
     padding: 8.375rem 5.125rem 1.125rem 5.125rem;
+    max-width: 1440px;
+  @media screen and (min-width: 1440px) {
+          padding: 0 auto;
+          margin: 0 auto;
+     
+  }
     @media screen and (max-width: 768px){
         padding: 4.125rem 2.625em 1.125rem 1.875rem;
     }
+    
+
     .contact-container{
         display: flex;
         justify-content: space-between;
@@ -92,7 +115,17 @@ const StyledContact = styled.div`
             @media screen and (max-width: 768px){
                 width: 100%;
             }
-           
+           .back-icon{
+                margin-bottom: 2.5rem;
+                width: 2rem;
+                height: 2rem;
+                cursor: pointer;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+           }
             .text-container{
                 h1{
                     font-family: 'Clash Display', sans-serif;

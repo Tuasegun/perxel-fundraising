@@ -84,6 +84,12 @@ export default Why;
 
 const WhyContainer = styled.div`
     position: relative;
+    max-width: 1440px;
+  @media screen and (min-width: 1440px) {
+          padding: 0 auto;
+          margin: 0 auto;
+          min-height: 70vh;
+  }
     .container{
         position: relative;
         .head-content{
@@ -180,11 +186,10 @@ const WhyContainer = styled.div`
             @media screen and (max-width: 768px){
                 padding-left: 0rem;
                 position: relative;
+                padding-right: 0rem;
                 /* height: 50rem; */
             }
-            @media screen and (min-width: 2560px) {
-                padding: 0 20%;
-              }
+           
            
             .why-image{
                 transform: translate(0, -85%);
@@ -192,12 +197,9 @@ const WhyContainer = styled.div`
                 @media screen and (max-width: 768px){
                     transform: translate(0, 0);
                     height: 29.25rem;
-                    width: 50%;
+                    width: 100%;
                 }
-                @media screen and (min-width: 2560px) {
-                  transform: translate(0, -78%);
-              }
-               
+             
                 img{
                     width: 100%;
                     height: 100%;

@@ -145,11 +145,19 @@ to train and mentor <span> 10,000 African youths</span> with tech skills
 export default Goals
 
 const  GoalsContainer = styled.div`
+    max-width: 1440px;
+  @media screen and (min-width: 1440px) {
+          padding: 0 auto;
+          margin: 0 auto;
+  }
     .container{
         padding: 3.125rem 2.3125rem ;
         @media screen and (max-width: 768px){
             padding: 0.875rem 0;
         }
+        @media screen and (min-width: 2560px) {
+          padding: 0 auto;
+  }
         .head{
             display: flex;
             padding-left: 2rem;

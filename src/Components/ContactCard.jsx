@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import linkedin from '../assets/images/team/linkedin.svg'
-const ContactCard = ({imgSrc, name, role}) => {
+const ContactCard = ({imgSrc, name, role, liurl}) => {
   return (
     <ContactCardStyled>
         <div className="container">
@@ -18,7 +18,9 @@ const ContactCard = ({imgSrc, name, role}) => {
                 </p>
                 </div>
                 <div className="social-container">
+                    <a href={liurl}>
                     <img src={linkedin} alt="" />
+                    </a>
                 </div>
             </div>
         </div>
