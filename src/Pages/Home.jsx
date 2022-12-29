@@ -6,10 +6,14 @@ import Goals from '../Components/Goals'
 import Header from '../Components/Header'
 import Hero from '../Components/Hero'
 import Why from '../Components/Why'
-
+import bgpattern from '../assets/images/bgpattern.png'
 const Home = () => {
   return (
-    <div>
+    <div
+    style={{
+      backgroundImage: `url(${bgpattern})`,
+    }}
+    >
         <Header/>
         <Hero/>
         <Why/>
