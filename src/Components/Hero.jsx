@@ -49,14 +49,15 @@ const HeroContainer = styled.div`
   padding: 4.125rem 5.125rem;
   height: 90vh;
   max-width: 1440px;
+  position: relative;
   @media screen and (min-width: 1440px) {
           padding: 0 auto;
           margin: 0 auto;
           max-height: 70vh;
   }
   @media screen and (max-width: 768px) {
-    padding: 4.125rem 2.625em 5.125rem 0.9rem;
-    min-height: 100vh;
+    padding: 4.125rem 2.625rem 2.125rem 0.9rem;
+    height: 100%;
   }
   .container {
     display: grid;

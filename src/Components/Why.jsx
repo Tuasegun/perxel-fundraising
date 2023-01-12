@@ -85,11 +85,19 @@ export default Why;
 const WhyContainer = styled.div`
     position: relative;
     max-width: 1440px;
+    padding: 10rem 0 1rem 0;
+   
+    @media (max-width: 768px){
+    padding: 3rem 0 1rem 0;
+  
+  }
+
   @media screen and (min-width: 1440px) {
           padding: 0 auto;
           margin: 0 auto;
           min-height: 70vh;
   }
+  
     .container{
         position: relative;
         .head-content{
@@ -107,7 +115,7 @@ const WhyContainer = styled.div`
                 color: #151515;
                 font-weight: 700;
 
-                @media screen and (max-width: 768px){
+                @media (max-width: 768px){
                     font-size: 1.875em;
                     line-height: 2rem;
                 }
